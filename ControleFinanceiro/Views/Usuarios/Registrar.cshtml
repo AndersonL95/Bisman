@@ -1,0 +1,31 @@
+﻿@model Usuario
+
+@{
+    Layout = "../Shared/_LayoutLogin.cshtml";
+}
+<div class="container" style="background-color:rgba(239, 239, 239, 0.80); border-radius:10px; padding:20px; width:300px;">
+    <h4>Registrar Conta</h4>
+    <form asp-controller="Usuarios" asp-action="Registrar">
+        <div asp-validation-summary="None" class="text-danger"></div>
+        <div class="form-group">
+            <label for="text">Nome:</label>
+            <input type="text" class="form-control" asp-for="Nome">
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" asp-for="Email">
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label for="pwd">Senha:</label>
+            <input type="password" class="form-control" asp-for="Senha">
+            <span asp-validation-for="Senha" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-success btn-block">Registrar</button>
+        <a class="btn btn-primary btn-block" style="border-style:hidden; color:aliceblue;" href="/Usuarios/Login">Login</a>
+    </form>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

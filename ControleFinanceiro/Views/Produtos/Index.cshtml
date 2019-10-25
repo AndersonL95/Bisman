@@ -1,0 +1,48 @@
+﻿@model IEnumerable<Bisman.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos";
+}
+
+<h3>@ViewData["Title"]</h3>
+<br />
+<p>
+    <a class="btn btn-primary" style="border-style:hidden; color:aliceblue; background-color:darkslateblue" asp-action="Create">Cadastrar Produto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Data)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Valor)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nome)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Data)
+                </td>
+                <td>
+                   R$ @Html.DisplayFor(modelItem => item.Valor)
+                </td>
+                <td>
+                    <!--<a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |-->
+                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

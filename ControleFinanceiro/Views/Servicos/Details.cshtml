@@ -1,0 +1,36 @@
+﻿@model Bisman.Models.Servico
+@{
+    ViewData["Title"] = "Detalhes do Serviço";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <h4>Serviço</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd>
+           R$ @Html.DisplayFor(model => model.Valor)
+        </dd>
+    </dl>
+</div>
+<div>
+    <!--<a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>-->
+    <a asp-action="Index" class="btn btn-secondary">Voltar para Serviços</a>
+</div>
+

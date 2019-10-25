@@ -1,0 +1,39 @@
+﻿@model Bisman.Models.Servico
+@{
+    ViewData["Title"] = "Excluir Serviço";
+}
+
+<h3>@ViewData["Title"]</h3>
+<hr />
+<div>
+    <h5>Tem certeza que deseja excluir?</h5>
+
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Data)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Data)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Valor)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Valor)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" />
+        <a asp-action="Index">Voltar para Serviços</a>
+    </form>
+</div>
+
+

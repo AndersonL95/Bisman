@@ -1,0 +1,42 @@
+﻿@model Usuario
+
+@{
+    Layout = "../Shared/_LayoutLogin.cshtml";
+}
+<div class="container" style="background-color:rgba(239, 239, 239, 0.80); border-radius:10px; padding:20px; width:300px;">
+    @{
+        try
+        {
+            if (TempData["MensagemLoginInvalido"].ToString() != null)
+            {
+                <div class="alert alert-danger">
+                    <strong><center>@TempData["MensagemLoginInvalido"]</center></strong>
+                </div>
+            }
+        }
+        catch { }
+    }
+    <form asp-controller="Usuarios" asp-action="ValidarLogin" autocomplete="off">
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" asp-for="Email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Senha:</label>
+            <input type="password" class="form-control" asp-for="Senha">
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="align-self:auto;">Entrar</button>
+        <a class="btn btn-success btn-block" style="border-style:hidden; color:aliceblue;" href="/Usuarios/Registrar">Registrar</a>
+    </form>
+</div>
+
+<script type="text/javascript">
+    var x = new Storage();
+    x.setItem("TESTE", 9999);
+
+    function Storage(){
+        this.setItem = function (name, value) {
+            window.localStorage.setItem(name, value);
+        }
+    }
+</script>

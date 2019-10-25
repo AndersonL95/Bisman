@@ -1,0 +1,21 @@
+﻿<div class="row">
+    <div class="col-lg-6">
+        <a class="btn btn-block" style="border-style:hidden; color:aliceblue; background-color:cornflowerblue" href="/Usuarios/Login">Entrar no Sistema</a>
+        <!--<button type="button" class="btn btn-block btn-primary"><a href="/Usuarios/Login" style="color:aliceblue">Entrar no Sistema</a></button>-->
+    </div>
+    <div class="col-lg-6">
+        <a class="btn btn-success btn-block" style="border-style:hidden; color:aliceblue;" href="/Usuarios/Registrar">Registrar Conta</a>
+        <!--<button type="button" class="btn btn-block btn-success"><a href="/Usuarios/Registrar" style="color:aliceblue">Registrar Conta</a></button>-->
+    </div>
+    </div>
+
+<script type="text/javascript">
+    var x = new Storage();
+    x.setItem("TESTE", 9999);
+
+    function Storage(){
+        this.setItem = function (name, value) {
+            window.localStorage.setItem(name, value);
+        }
+    }
+</script>
