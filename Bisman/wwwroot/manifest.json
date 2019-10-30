@@ -1,0 +1,29 @@
+{
+  "name": "Bisman",
+  "short_name": "PWA",
+  "description": "Bisman PWA application in ASP.NET Core.",
+  "icons": [
+    {
+      "src": "img/icons/logo144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "img/icons/logo168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "start_url": "/"
+}  
