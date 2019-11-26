@@ -39,8 +39,9 @@
                 </td>
                 <td>
                     <!--<a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |-->
-                    <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
-                    <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+                  
+                    <a class="btn btn-primary" style="border-style:hidden; color:aliceblue; background-color:darkslateblue" asp-action="Details" asp-rout-id="@item.Id">Detalhes</a>
+                    <a class="btn btn-primary" style="border-style:hidden; color:aliceblue; background-color:darkslateblue" asp-action="Delete" asp-rout-id="@item.Id">Delete</a>
                 </td>
             </tr>
         }
