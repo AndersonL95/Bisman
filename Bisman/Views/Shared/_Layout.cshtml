@@ -79,7 +79,7 @@
         var nome = '@HttpContextAccessor.HttpContext.Session.GetString("NomeUsuarioLogado")'
         if (nome != "") {
             var divNome = document.getElementById("NomeUsuarioLogado");
-            divNome.innerHTML = "Olá " + nome + " <form action=" /Usuarios/Login/0" " method="get"> <input type="submit" value="Sair"/></form>";
+            divNome.innerHTML = "Olá " + nome + " <a href='/Usuarios/Login/0'>(Sair)</a>";
             divNome.style = "color:black; text-align: right; height:40px; padding-top:9px;";
         }
         else {
