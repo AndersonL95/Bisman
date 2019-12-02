@@ -22,7 +22,7 @@ namespace Bisman.Services
 
         public async Task<Usuario> ValidarLoginAsync(Usuario obj)
         {
-            return await _context.Usuario.Where(x => x.Email == obj.Email && x.Senha == obj.Senha).SingleOrDefaultAsync();
+            return await _context.Usuario.Where(x => x.Email == obj.Email && x.Senha == obj.Senha).FirstOrDefaultAsync();
         }
 
     }

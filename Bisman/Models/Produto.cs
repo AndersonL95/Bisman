@@ -20,7 +20,8 @@ namespace Bisman.Models
 
         [Required(ErrorMessage = "Preencha o campo {0}")]
         [Range(1.0, 5000.0, ErrorMessage = "O {0} deve estar entre {1} e {2}")]
-        [DisplayFormat(DataFormatString = "{0:F2}")]        
+        [DisplayFormat(DataFormatString = "{0:F2}")]
+        [DataType(DataType.Currency)]        
         public double Valor { get; set; }
 
         public Usuario Usuario { get; set; }
