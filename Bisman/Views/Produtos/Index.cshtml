@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Produtos";
 }
-
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <h3>@ViewData["Title"]</h3>
 <br />
 <p>
@@ -39,8 +39,13 @@
                 </td>
                 <td>
                     <!--<a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |-->
-                    <a class="btn btn-primary" style="border-style:hidden; color:aliceblue; background-color:darkslateblue" asp-action="Details" asp-route-id="@item.Id">Detalhes</a>
-                    <a class="btn btn-primary" style="border-style:hidden; color:aliceblue; background-color:darkslateblue" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <button type="button" class="btn btn-primary" aria-label="Alinhar na esquerda" asp-action="Delete" asp-route-id="@item.Id">
+                        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                    </button>
+                    <button type="button" class="btn btn-primary" aria-label="Alinhar na esquerda" asp-action="Delete" asp-route-id="@item.Id">
+                        <span class="glyphicon glyphicon-floppy-remove" aria-hidden="true"></span>
+                    </button>
+                    
                 </td>
             </tr>
         }
