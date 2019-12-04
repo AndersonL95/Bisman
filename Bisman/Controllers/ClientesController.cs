@@ -10,6 +10,28 @@ namespace Bisman.Controllers
 
     public class ClientesController : Controller
     {
+
+          private readonly UsuarioService _usuarioService;
+        private readonly ProdutoService _produtoService;
+        private readonly ServicoService _servicoService;
+
+        public ClientesController(ClienteService ClienteService, ProdutoService produtoService, ServicoService servicoService)
+        {
+            _ClienteService = ClienteService;
+        }
+
+
+        public IActionResult Success()
+        {
+            return View();
+        }
+
+        public IActionResult Relatorios()
+        {
+            return View();
+        }
+
+
       
     }
 }
