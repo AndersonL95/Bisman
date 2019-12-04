@@ -39,12 +39,10 @@
                 </td>
                 <td>
                     <!--<a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |-->
-                    <button type="button" class="btn btn-primary" aria-label="Alinhar na esquerda" asp-action="Delete" asp-route-id="@item.Id">
-                        <span class="glyphicon glyphicon-list" aria-hidden="true"></span>
-                    </button>
-                    <button type="button" class="btn btn-primary" aria-label="Alinhar na esquerda" asp-action="Delete" asp-route-id="@item.Id">
-                        <span class="glyphicon glyphicon-floppy-remove" aria-hidden="true"></span>
-                    </button>
+                    <a class="btn btn-primary" style="border-style:hidden; color:aliceblue; background-color:darkslateblue" asp-action="Details" asp-route-id="@item.Id">
+                        <span class="glyphicon glyphicon-list" aria-hidden="true"></span></a>
+                   
+                   <a class="btn btn-primary" style="border-style:hidden; color:aliceblue; background-color:darkslateblue" asp-action="Delete" asp-route-id="@item.Id">
                 </td>
             </tr>
         }
