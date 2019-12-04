@@ -13,7 +13,7 @@ namespace Bisman.Controllers
 
         public IActionResult Help()
         {
-            return View();
+            return View("Contato");
         }
 
         public IActionResult Menu()
